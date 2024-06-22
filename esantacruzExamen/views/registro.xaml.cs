@@ -63,6 +63,6 @@ namespace esantacruzExamen.views;
                          $"\nPago Mensual: {cuotaConInteres:C2} (4 cuotas)" +
                          $"\nPago Total: {pagoTotal:C2}";
 
-        DisplayAlert("Resumen del Estudiante", resumen, "OK");
+        DisplayAlert("Resumen del Estudiante", resumen, "OK" );
     }
 }
