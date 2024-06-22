@@ -9,14 +9,118 @@
     Spacing="20"
     >
 
-        <Label x:Name="lblNombre" 
-           HorizontalTextAlignment="Center"
-           FontSize="15"
-           TextColor="red" />
-        
         <Label 
-        Text="RESUMEN"
-        FontSize="20"
-        HorizontalTextAlignment="Center"/>
+Text="VENTANA DE RESUMEN"
+FontSize="24"
+HorizontalTextAlignment="Center"
+TextColor="RED"/>
+
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre:"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtNombre"
+                   IsReadOnly="True"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+
+            <Label Text="Apellido:"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtApellido"
+                   IsReadOnly="True"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+
+            <Label Text="Edad:"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtEdad"
+                   IsReadOnly="True"
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+
+            <Label Text="Fecha:"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="3"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtFecha"
+                   IsReadOnly="True"
+                   Grid.Row="3"
+                   Grid.Column="1"/>
+
+            <Label Text="Ciudad:"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="4"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtCiudad"
+                   IsReadOnly="True"
+                   Grid.Row="4"
+                   Grid.Column="1"/>
+
+            <Label Text="Pais:"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="5"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtPais"
+                   IsReadOnly="True"
+                   Grid.Row="5"
+                   Grid.Column="1"/>
+
+            <Label Text="Monto Inicial:"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="6"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtMontoInicial"
+                   IsReadOnly="True"
+                   Grid.Row="6"
+                   Grid.Column="1"/>
+
+            <Label Text="Pago Mensual:"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="7"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtPagoMensual"
+                   IsReadOnly="True"
+                   Grid.Row="7"
+                   Grid.Column="1"/>
+
+            <Label Text="Pago Total:"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="8"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtPagoTotal"
+                   IsReadOnly="True"
+                   Grid.Row="8"
+                   Grid.Column="1"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

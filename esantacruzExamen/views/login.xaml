@@ -51,25 +51,10 @@
                  Placeholder="Ingrese la contaseña"
                  IsPassword="True"
                         Grid.Row="1"
-                        Grid.Column="1"/>
-
-
-            <Button x:Name="btnInicio"
-     Text="Inciar Sesion"
-     Clicked="btnInicio_Clicked"
-       Grid.Row="3"
-       Grid.Column="0"/>
-
-            <Button x:Name="btnRegistro"
-     Text="REGISTRAR"
-            Clicked="btnRegistro_Clicked"
-            Grid.Row="3"
-            Grid.Column="1"/>
-
+                        Grid.Column="1"/>           
 
         </Grid>
-
-
+        <Button Text="Iniciar Sesión" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Clicked="OnLoginClicked" HorizontalOptions="Center" />
 
     </VerticalStackLayout>
 </ContentPage>

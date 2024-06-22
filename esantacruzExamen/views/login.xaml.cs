@@ -2,39 +2,41 @@ namespace esantacruzExamen.views;
 
 public partial class login : ContentPage
 {
+    // Definir la matriz de usuarios y contraseñas
+    private readonly string[,] usuariosContraseñas = new string[2, 2]
+    {
+            { "estudiante", "moviles" },
+            { "uisrael", "2024" }
+    };
+
     public login()
     {
         InitializeComponent();
     }
 
-    string user;
-    string password;
-
-    public login(string usuario, string contrasena)
+    private void OnLoginClicked(object sender, EventArgs e)
     {
-        InitializeComponent();
-        user = usuario;
-        password = contrasena;
-    }
+        string usuario = txtUsuario.Text;
+        string contrasena = txtContraseña.Text;
+        bool isAuthenticated = false;
 
-    private void btnInicio_Clicked(object sender, EventArgs e)
-    {
-        if (user == txtUsuario.Text && password == txtContraseña.Text)
+        // Verificar las credenciales
+        for (int i = 0; i < 2; i++)
         {
-            Navigation.PushAsync(new resumen(user));
+            if (usuariosContraseñas[i, 0] == usuario && usuariosContraseñas[i, 1] == contrasena)
+            {
+                isAuthenticated = true;
+                break;
+            }
+        }
+
+        if (isAuthenticated)
+        {
+            Navigation.PushAsync(new registro(usuario));
         }
         else
         {
-            DisplayAlert("alerta", "USUARIO O CONTRASEÑA INCORRECTOS", "OK");
+            DisplayAlert("Error", "Datos incorrectos", "OK");
         }
-
     }
-
-
-    private void btnRegistro_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new registro());
-    }
-
-
 }
