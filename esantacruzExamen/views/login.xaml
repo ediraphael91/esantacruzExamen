@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="esantacruzExamen.views.login"
+             Title="login">
+    <VerticalStackLayout
+    Spacing="20"
+    Padding="20"
+    >
+
+        <Label 
+        Text="INICIO DE SESION"
+        HorizontalTextAlignment="Center"
+        FontSize="20"
+        TextColor="RED"
+        />
+
+        <Image Source="uisrael.png" WidthRequest="100"/>
+
+
+
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="USUARIO"
+                  HorizontalOptions="Center"
+                  FontSize="18"
+                  Grid.Row="0"
+                  Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+                 Placeholder="Ingrese el usuario"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+
+            <Label Text="CONTRASEÑA"
+                  HorizontalTextAlignment="Center"
+                  HorizontalOptions="Center"
+                  FontSize="18"
+                  Grid.Row="1"
+                  Grid.Column="0"/>
+            <Entry x:Name="txtContraseña"
+                 Placeholder="Ingrese la contaseña"
+                 IsPassword="True"
+                        Grid.Row="1"
+                        Grid.Column="1"/>
+
+
+            <Button x:Name="btnInicio"
+     Text="Inciar Sesion"
+     Clicked="btnInicio_Clicked"
+       Grid.Row="3"
+       Grid.Column="0"/>
+
+            <Button x:Name="btnRegistro"
+     Text="REGISTRAR"
+            Clicked="btnRegistro_Clicked"
+            Grid.Row="3"
+            Grid.Column="1"/>
+
+
+        </Grid>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="esantacruzExamen.views.registro"
+             NavigationPage.HasBackButton="False"
+             Title="registro">
+    <VerticalStackLayout
+    Spacing="14"
+    Padding="25"
+    >
+        <Label 
+        Text="VENTANA DE REGISTRO"
+        FontSize="20"
+        HorizontalTextAlignment="Center"
+        TextColor="RED"/>
+
+        <Grid RowSpacing="15">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="ELEMENTO VISUAL"
+          HorizontalOptions="Center"
+          FontSize="18"
+          Grid.Row="0"
+          Grid.Column="0"/>
+
+            <Picker x:Name="pkPais" Title="Pais">
+                <Picker.Items>
+                    <x:String>ECUADOR</x:String>
+                    <x:String>COLOMBIA</x:String>
+                    <x:String>PERU</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            
+           
+
+            <Picker x:Name="pkCiudades" Title="Cuidades">
+                <Picker.Items>
+                    <x:String>QUITO</x:String>
+                    <x:String>BARRANQUILLA</x:String>
+                    <x:String>LIMA</x:String>
+                </Picker.Items>
+            </Picker>
+
+
+            <DatePicker x:Name="dpFecha" Format="MM/dd/yyyy">
+            </DatePicker>
+
+            <Entry x:Name="txtUsuario"
+         Placeholder="Ingrese el usuario"
+            Grid.Row="0"
+            Grid.Column="1"/>
+
+            <Label 
+    Text="MONTO INICIAL"
+    FontSize="20"
+    HorizontalTextAlignment="Center"
+    TextColor="Red"/>
+            <Entry x:Name="txtDato1"
+       Placeholder="Ingrese dato 1"
+       Keyboard="Numeric"
+       MaxLength="4"
+/>
+        </Grid>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>
